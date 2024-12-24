@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новогодняя викторина</title>
+</head>
+<body>
+    
+    <div class="snowblock"></div>
+
+    <!--окно старта-->
+    <div class="wrapper" id="start">
+        <div id="start_window">     
+            <div class="txt">                                        
+                <h1>Новогодняя викторина</h1>
+                <div class="p">
+                    <p class="rules">Сыграйте в новогоднюю викторину! Ответьте на несколько новогодних вопросов!</p>
+                    <p>Автор: Марченко Анна</p>
+                </div>
+                <div class="inp_group">
+                    <label for="name">Введите имя:</label>
+                    <input type="text" id="name" minlength="3" maxlength="12" placeholder="ИМЯ">  <!--имя игрока-->
+                </div>
+            </div>
+            <button id="start_game" onclick="StartGame()">Начать викторину</button>
+        </div>
+    </div>
+
+    <!--окно вопроса-->
+    <div class="wrapper wrap_question" id="questions">
+        <div class="question_window">     
+            <!--вопрос-->
+            <h2 id="question">вопрос</h2>
+            <!--варианты ответов-->                     
+            <fieldset class="answers" name="answers">
+                <!--вариант 1-->
+                <div class="answer">
+                    <input type="radio" id="var1" name="answers" value="">  
+                    <label for="var1" id="variant1">ответ 1</label>
+                </div>
+                <!--вариант 2-->
+                <div>
+                    <input type="radio" id="var2" name="answers" value="">  
+                    <label for="var2" id="variant2">ответ 2</label>
+                </div>
+                <!--вариант 3-->
+                <div>
+                    <input type="radio" id="var3" name="answers" value=""> 
+                    <label for="var3" id="variant3">ответ 3</label>
+                </div>
+            </fieldset>
+            <button onclick="checkAnswer()">Далее</button>
+            <p class="p">Игрок: <span id="player"></span></p>
+            <p class="p">Очков: <span id="score"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
